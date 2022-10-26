@@ -1,0 +1,11 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        c = {}
+        for i in nums:
+            if(i not in c):
+                a=nums.count(i)
+                c[i]=a
+        for key,val in c.items():
+            if c[key]==1:
+                return key
+            
